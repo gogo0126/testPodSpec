@@ -93,11 +93,13 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "AnueCore/**/*"
-  s.exclude_files = "AnueCore/*.plist", "AnueCore/**/*.{xib}"
+  s.source_files  = "AnueCore/**/*.{swift}"
+  # s.exclude_files = "AnueCore/*.plist", "AnueCore/**/*.{xib}"
   
-  # s.resources = "AnueCore/**/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
-
+  #s.resources = "AnueCore/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+s.resource_bundles = {
+  'MyPodBundle' => ['AnueCore/ViewController/MainVC/BaseMainVC.xib']
+}
   # s.public_header_files = "Classes/**/*.h"
 
 
